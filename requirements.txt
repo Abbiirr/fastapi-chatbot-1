@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+langchain
+transformers
+sentence-transformers
+chromadb
+langchain_community
+langchain-huggingface
+tf-keras
+torch

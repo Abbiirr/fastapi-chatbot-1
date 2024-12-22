@@ -1,0 +1,7 @@
+Current Account: A basic deposit account with no restrictions on withdrawals or deposits. It is designed for daily transactions.
+Savings Account: An account designed to encourage saving by offering interest on the deposited amount while allowing limited withdrawals.
+Insurance: A contract that provides financial protection or reimbursement against losses from specific risks or uncertainties.
+Fixed Deposit: An investment account where money is locked in for a fixed term with a higher interest rate than savings accounts.
+Credit Card: A card that allows users to borrow funds for purchases, up to a pre-approved credit limit, with a promise to repay later.
+Mortgage Loan: A loan used to purchase property, where the property itself serves as collateral.
+Personal Loan: An unsecured loan provided for various personal needs, repayable in installments over time.
