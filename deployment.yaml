@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-chatbot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fastapi-chatbot
+  template:
+    metadata:
+      labels:
+        app: fastapi-chatbot
+    spec:
+      containers:
+      - name: fastapi-chatbot
+        image: fastapi-chatbot:latest
+        ports:
+        - containerPort: 8000
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 500     # Start checking after 5 seconds
+          periodSeconds: 100          # Check every 10 seconds
+          failureThreshold: 100000000  # Effectively makes the wait infinite
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastapi-chatbot-service
+spec:
+  selector:
+    app: fastapi-chatbot
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+  type: LoadBalancer

@@ -9,3 +9,7 @@ app.include_router(query_router, prefix="/api/v1")
 @app.get("/")
 def health_check():
     return {"status": "ok"}
+
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
